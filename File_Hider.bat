@@ -11,7 +11,7 @@ timeout 4 >nul
 set /P name="Enter File Name: "
 cls
 :question
-echo Would you like to hide of show
+echo Would you like to hide or show
 echo Format-"hide","show"
 set /p hs=""
 
@@ -33,7 +33,6 @@ echo File Succesfully un-hidden
 goto end
 :end
 timeout 3 >nul
-echo See You Soon
 exit
 
 :error
