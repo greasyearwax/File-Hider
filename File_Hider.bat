@@ -17,29 +17,5 @@ set /p hs=""
 
 :-Main
 
-IF "%hs%"=="hide" GOTO :hide 
-IF "%hs%"=="show" GOTO :show 
-goto error
-
-:hide
-attrib +s +h %name%
-cls
-echo File Succesfully hidden
-goto end
-:show
-attrib -s -h %name%
-cls
-echo File Succesfully un-hidden
-goto end
-:end
-timeout 3 >nul
-exit
-
-:error
-cls
-echo error incorrect format
-echo %hs% is not a valid answer
-echo please try again
-timeout 3 >nul
-cls
-goto question
+IF "%hs%"=="hide" attrib +s +h %name%
+IF "%hs%"=="show" attrib -s -h %name%
